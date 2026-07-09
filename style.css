@@ -833,30 +833,18 @@ h1, h2, h3, h4, h5 {
   .hero-visual { max-width: 380px; margin: 0 auto var(--sp-6); }
 
   /* premium "showcase" treatment for the video on mobile — same video,
-     nicer frame: tighter cinematic crop, glowing red-tinted edge,
-     viewfinder-style corner brackets, a bottom cinematic scrim, and a
-     small live badge, instead of a plain rounded rectangle. */
+     nicer frame: tighter cinematic crop, glowing red-tinted edge, a
+     smooth soft-rounded border, a bottom cinematic scrim, and a small
+     live badge, instead of a plain flat rectangle. */
   .hero-visual-frame {
     aspect-ratio: 4 / 3.35;
     border-radius: 28px;
-    border-color: rgba(228, 0, 28, 0.32);
+    border: 1.5px solid rgba(228, 0, 28, 0.28);
     box-shadow:
       0 26px 60px rgba(16, 16, 19, 0.20),
       0 0 0 1px rgba(255, 255, 255, 0.35) inset,
       0 14px 40px rgba(228, 0, 28, 0.16);
   }
-  .hero-visual-frame::before,
-  .hero-visual-frame::after {
-    content: "";
-    position: absolute;
-    z-index: 3;
-    width: 22px;
-    height: 22px;
-    border: 2px solid rgba(255, 255, 255, 0.85);
-    pointer-events: none;
-  }
-  .hero-visual-frame::before { top: 14px; left: 14px; border-right: none; border-bottom: none; border-radius: 6px 0 0 0; }
-  .hero-visual-frame::after { bottom: 14px; right: 14px; border-left: none; border-top: none; border-radius: 0 0 6px 0; }
 
   .hero-visual-sheen {
     background:
