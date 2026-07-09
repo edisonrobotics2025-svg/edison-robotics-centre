@@ -753,6 +753,10 @@ h1, h2, h3, h4, h5 {
   mix-blend-mode: overlay;
 }
 
+/* Mobile-only video badge — hidden by default (desktop untouched); the
+   mobile media query below is what turns it on. */
+.hero-visual-tag { display: none; }
+
 .hero-float-card {
   position: absolute;
   z-index: 3;
@@ -827,6 +831,68 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 720px) {
   .hero { min-height: auto; padding: 104px 0 52px; }
   .hero-visual { max-width: 380px; margin: 0 auto var(--sp-6); }
+
+  /* premium "showcase" treatment for the video on mobile — same video,
+     nicer frame: tighter cinematic crop, glowing red-tinted edge,
+     viewfinder-style corner brackets, a bottom cinematic scrim, and a
+     small live badge, instead of a plain rounded rectangle. */
+  .hero-visual-frame {
+    aspect-ratio: 4 / 3.35;
+    border-radius: 28px;
+    border-color: rgba(228, 0, 28, 0.32);
+    box-shadow:
+      0 26px 60px rgba(16, 16, 19, 0.20),
+      0 0 0 1px rgba(255, 255, 255, 0.35) inset,
+      0 14px 40px rgba(228, 0, 28, 0.16);
+  }
+  .hero-visual-frame::before,
+  .hero-visual-frame::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    pointer-events: none;
+  }
+  .hero-visual-frame::before { top: 14px; left: 14px; border-right: none; border-bottom: none; border-radius: 6px 0 0 0; }
+  .hero-visual-frame::after { bottom: 14px; right: 14px; border-left: none; border-top: none; border-radius: 0 0 6px 0; }
+
+  .hero-visual-sheen {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 28%, transparent 55%, rgba(8,8,10,0.10) 78%, rgba(8,8,10,0.55) 100%);
+  }
+
+  .hero-visual-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    position: absolute;
+    z-index: 2;
+    left: 14px;
+    bottom: 14px;
+    padding: 7px 14px 7px 10px;
+    border-radius: var(--r-full);
+    background: rgba(8, 8, 10, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+  }
+  .hero-visual-tag-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--red-bright);
+    box-shadow: 0 0 8px var(--red-bright);
+    flex-shrink: 0;
+    animation: pulse-dot 1.8s ease-in-out infinite;
+  }
+
   .hero-badge {
     font-size: 0.74rem;
     padding: 7px 16px 7px 10px;
