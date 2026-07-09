@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initRipple();
   initHeroParallax();
   initDecoScrollParallax();
+  initMobileFabVisibility();
 });
 
 /* ---------------- NAV: shrink + hide-on-scroll-down + scrollspy ---------------- */
@@ -310,4 +311,27 @@ function initDecoScrollParallax() {
   }
 
   window.addEventListener("scroll", onScroll, { passive: true });
+}
+
+/* ---------------- MOBILE: HIDE WHATSAPP FAB WHILE HERO IS ON SCREEN ----------------
+ * Desktop is untouched (fab always visible there, as before) — below 768px
+ * only, the fab fades out while any part of the hero is in view so it never
+ * sits on top of the headline/paragraph on short devices, then fades back
+ * in once the user scrolls past. */
+function initMobileFabVisibility() {
+  const fab = document.querySelector(".whatsapp-fab");
+  const hero = document.querySelector(".hero");
+  if (!fab || !hero) return;
+  if (!window.matchMedia("(max-width: 767px)").matches) return;
+
+  fab.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+
+  const observer = new IntersectionObserver(entries => {
+    const overHero = entries[0].isIntersecting;
+    fab.style.opacity = overHero ? "0" : "";
+    fab.style.transform = overHero ? "scale(0.5)" : "";
+    fab.style.pointerEvents = overHero ? "none" : "";
+  }, { threshold: 0.3 });
+
+  observer.observe(hero);
 }

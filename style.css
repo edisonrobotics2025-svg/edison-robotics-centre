@@ -825,11 +825,35 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (max-width: 720px) {
-  .hero { min-height: auto; padding: 120px 0 70px; }
-  .hero-cta-row .btn-hero-primary, .hero-cta-row .btn-hero-secondary { flex: 1 1 auto; justify-content: center; }
-  .hero-stats-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-5) 0; }
+  .hero { min-height: auto; padding: 104px 0 52px; }
+  .hero-visual { max-width: 380px; margin: 0 auto var(--sp-6); }
+  .hero-badge {
+    font-size: 0.74rem;
+    padding: 7px 16px 7px 10px;
+    white-space: normal;
+    line-height: 1.4;
+  }
+  .hero-copy h1 { font-size: 1.95rem; line-height: 1.18; letter-spacing: -0.005em; }
+  .hero-lead { font-size: 0.96rem; line-height: 1.7; margin-top: var(--sp-4); }
+  .hero-cta-row { margin-top: var(--sp-5); gap: 10px; }
+  .hero-cta-row .btn-hero-primary, .hero-cta-row .btn-hero-secondary { flex: 1 1 auto; justify-content: center; padding-left: 24px; padding-right: 20px; }
+  .hero-stats-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-5) 0; margin-top: var(--sp-6); padding: 1.1rem 0.4rem; }
   .hero-stat:nth-child(2)::after { display: none; }
   .hero-shape-3 { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding-top: 88px; padding-bottom: 40px; }
+  .hero-visual { max-width: 260px; margin-bottom: var(--sp-4); }
+  .hero-badge { font-size: 0.66rem; padding: 6px 14px 6px 9px; gap: 7px; margin-bottom: var(--sp-4); }
+  .hero-badge .dot-live { width: 6px; height: 6px; box-shadow: 0 0 0 3px var(--red-subtle); }
+  .hero-copy h1 { font-size: 1.5rem; line-height: 1.22; }
+  .hero-lead { font-size: 0.88rem; line-height: 1.6; margin-top: var(--sp-3); max-width: 34ch; margin-left: auto; margin-right: auto; }
+  .hero-cta-row { flex-direction: column; margin-top: var(--sp-4); }
+  .hero-cta-row .btn-hero-primary, .hero-cta-row .btn-hero-secondary { width: 100%; padding-top: 14px; padding-bottom: 14px; }
+  .hero-stats-panel { margin-top: var(--sp-5); }
+  .hero-stat-num { font-size: 1.25rem; }
+  .hero-stat-label { font-size: 0.6rem; }
 }
 
 @media (max-width: 560px) {
@@ -1297,7 +1321,8 @@ h1, h2, h3, h4, h5 {
 @keyframes waPulse { 0%,100% { box-shadow: 0 10px 30px rgba(37,211,102,0.4); } 50% { box-shadow: 0 10px 36px rgba(37,211,102,0.7), 0 0 0 9px rgba(37,211,102,0.12); } }
 
 @media (max-width: 560px) {
-  .whatsapp-fab { padding: 14px; border-radius: 50%; bottom: 20px; right: 18px; }
+  .whatsapp-fab { padding: 13px; border-radius: 50%; bottom: 18px; right: 16px; }
+  .whatsapp-fab svg { width: 21px; height: 21px; }
   .whatsapp-fab .wa-label { display: none; }
 }
 
