@@ -37,36 +37,114 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="hero-media">
-      <video autoplay muted loop playsinline poster="assets/ach1.PNG">
-        <source src="assets/ach40.mp4" type="video/mp4">
-      </video>
+    <div class="hero-bg-fx" aria-hidden="true"></div>
+    <div class="hero-grid-fx" aria-hidden="true"></div>
+    <div class="hero-orbit" id="heroOrbitA" aria-hidden="true">
+      <span class="hero-orbit-ring-3"></span>
+      <span class="hero-orbit-tick hero-orbit-tick-n"></span>
+      <span class="hero-orbit-tick hero-orbit-tick-e"></span>
+      <span class="hero-orbit-tick hero-orbit-tick-s"></span>
+      <span class="hero-orbit-tick hero-orbit-tick-w"></span>
+      <span class="hero-orbit-dot hero-orbit-dot-1"></span>
+      <span class="hero-orbit-dot hero-orbit-dot-2"></span>
     </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-grid-fx"></div>
+    <div class="hero-orbit-b" id="heroOrbitB" aria-hidden="true">
+      <span class="hero-orbit-dot hero-orbit-dot-3"></span>
+    </div>
+    <div class="hero-lines" aria-hidden="true">
+      <span class="hero-line hero-line-1"></span>
+      <span class="hero-line hero-line-2"></span>
+      <span class="hero-line hero-line-3"></span>
+    </div>
+    <div class="hero-shapes" aria-hidden="true">
+      <span class="hero-shape hero-shape-1"></span>
+      <span class="hero-shape hero-shape-2"></span>
+      <span class="hero-shape hero-shape-3"></span>
+      <span class="hero-shape hero-shape-4"></span>
+      <span class="hero-shape hero-shape-5"></span>
+      <span class="hero-shape hero-shape-6"></span>
+      <span class="hero-shape hero-shape-7"></span>
+      <span class="hero-shape hero-shape-8"></span>
+      <span class="hero-shape hero-shape-9"></span>
+    </div>
 
-    <div class="hero-content">
-      <span class="hero-kicker"><span class="dot-live">●</span> Malaysia's Leading Robotics &amp; AI Academy</span>
-      <h1>Preparing Future <span class="accent">Innovators</span></h1>
-      <div class="hero-stack">
-        <span>Robotics</span><span>Artificial Intelligence</span><span>Coding</span>
+    <div class="hero-inner">
+
+      <div class="hero-copy">
+        <span class="hero-badge reveal"><span class="dot-live" aria-hidden="true"></span> Malaysia's Premier Robotics &amp; AI Learning Centre</span>
+
+        <h1 class="reveal d1">Empowering Future Innovators Through <span class="accent">Robotics, AI</span> &amp; Emerging Technologies</h1>
+
+        <p class="hero-lead reveal d2">
+          Edison Robotics Centre is Malaysia's premier STEM academy — specialising in coding, robotics,
+          drones and AI for primary and secondary students, taught through hands-on projects, real
+          competitions and certified trainers.
+        </p>
+
+        <div class="hero-cta-row reveal d3">
+          <a href="courses.html" class="btn-hero-primary">
+            <span class="btn-shine" aria-hidden="true"></span>
+            <span class="btn-label">Explore Programmes</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="contactus.html" class="btn-hero-secondary">
+            <span class="btn-fill" aria-hidden="true"></span>
+            <span class="btn-label">Book Free Trial</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats-panel reveal d4">
+          <div class="hero-stat">
+            <div class="hero-stat-num" data-count-to="200">0<span class="suffix">+</span></div>
+            <div class="hero-stat-label">Students Trained</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num" data-count-to="6">0<span class="suffix">+</span></div>
+            <div class="hero-stat-label">Schools Partnered</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num" data-count-to="50">0<span class="suffix">+</span></div>
+            <div class="hero-stat-label">Workshops Conducted</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num" data-count-to="10">0<span class="suffix">+</span></div>
+            <div class="hero-stat-label">Competition Achievements</div>
+          </div>
+        </div>
       </div>
-      <p class="sub">
-        Edison Robotics Centre is Malaysia's premier STEM academy — specialising in coding, robotics,
-        drones and AI for primary and secondary students, taught through hands-on projects, real
-        competitions and certified trainers.
-      </p>
-      <div class="hero-actions">
-        <a href="courses.html" class="btn btn-primary">Explore Courses</a>
-        <a href="events.html" class="btn btn-ghost">Upcoming Events</a>
+
+      <div class="hero-visual reveal-right" id="heroVisual">
+        <div class="hero-visual-glow" aria-hidden="true"></div>
+        <div class="hero-visual-frame">
+          <video autoplay muted loop playsinline poster="assets/ach1.PNG">
+            <source src="assets/ach40.mp4" type="video/mp4">
+          </video>
+          <div class="hero-visual-sheen" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-float-card hero-float-card-top">
+          <span class="hfc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1.5"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>
+          </span>
+          <div class="hfc-text"><strong>Hands-on Robotics</strong><span>Live builds every class</span></div>
+        </div>
+
+        <div class="hero-float-card hero-float-card-bottom">
+          <span class="hfc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M6 4h12v3a6 6 0 0 1-12 0V4Z"/><path d="M6 5H3v2a4 4 0 0 0 4 4M18 5h3v2a4 4 0 0 1-4 4"/></svg>
+          </span>
+          <div class="hfc-text"><strong>10+ Awards Won</strong><span>National &amp; International</span></div>
+        </div>
       </div>
+
     </div>
 
     <div class="hero-scroll-cue"><span class="line"></span>Scroll</div>
   </section>
 
   <!-- ===== WHY EDISON ===== -->
-  <section class="section" id="why">
+  <section class="section deco-square deco-sm deco-tl" id="why">
     <div class="container">
       <div class="section-head centered reveal">
         <span class="eyebrow">Why Edison Robotics Centre</span>
@@ -128,7 +206,7 @@
   </section>
 
   <!-- ===== ABOUT TEASER ===== -->
-  <section class="section bg-alt" id="about">
+  <section class="section bg-alt bg-pattern-blueprint deco-circle deco-lg deco-tr" id="about">
     <div class="container">
       <div class="split-2">
         <div class="reveal-left">
@@ -150,7 +228,7 @@
   </section>
 
   <!-- ===== COURSES ===== -->
-  <section class="section" id="courses">
+  <section class="section bg-pattern-circuit deco-square deco-md deco-bl deco-delay-1" id="courses">
     <div class="container">
       <div class="section-head centered reveal">
         <span class="eyebrow">Programmes</span>
@@ -344,7 +422,7 @@
   </section>
 
   <!-- ===== GALLERY PREVIEW ===== -->
-  <section class="section" id="gallery">
+  <section class="section bg-pattern-dots deco-circle deco-md deco-br deco-delay-2" id="gallery">
     <div class="container">
       <div class="section-head centered reveal">
         <span class="eyebrow">Life at Edison</span>
@@ -368,7 +446,7 @@
   </section>
 
   <!-- ===== TESTIMONIALS ===== -->
-  <section class="section bg-alt">
+  <section class="section bg-alt deco-circle deco-sm deco-tl">
     <div class="container">
       <div class="section-head centered reveal">
         <span class="eyebrow">Trusted By Families</span>

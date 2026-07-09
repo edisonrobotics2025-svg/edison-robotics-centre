@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initGalleryFilter();
   initLightbox();
   initRipple();
+  initHeroParallax();
+  initDecoScrollParallax();
 });
 
 /* ---------------- NAV: shrink + hide-on-scroll-down + scrollspy ---------------- */
@@ -249,4 +251,63 @@ function initRipple() {
       btn.style.setProperty("--ry", (e.clientY - rect.top) + "px");
     });
   });
+}
+
+/* ---------------- HERO MOUSE PARALLAX ---------------- */
+function initHeroParallax() {
+  const hero = document.querySelector(".hero");
+  const visual = document.getElementById("heroVisual");
+  if (!hero || !visual) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+
+  hero.addEventListener("mousemove", e => {
+    const rect = hero.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width - 0.5;
+    const py = (e.clientY - rect.top) / rect.height - 0.5;
+    visual.style.transform = `translate(${px * -12}px, ${py * -10}px) rotate(${px * 1.1}deg)`;
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    visual.style.transform = "";
+  });
+}
+
+/* ---------------- SELECTED DECORATIVE ELEMENTS: SCROLL PARALLAX ----------------
+ * A very gentle, cheap scroll-linked drift for the hero's two orbit rings —
+ * only these two elements, only while the hero is on screen (IntersectionObserver
+ * gates the scroll listener), and rAF-throttled so it never fires more than
+ * once per frame. Everything else's motion comes from the CSS float
+ * animation, which is free (GPU-composited, no JS per frame). */
+function initDecoScrollParallax() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const targets = [
+    { el: document.getElementById("heroOrbitA"), speed: 0.05 },
+    { el: document.getElementById("heroOrbitB"), speed: -0.04 }
+  ].filter(t => t.el);
+  if (!targets.length) return;
+
+  let active = false;
+  let ticking = false;
+
+  const observer = new IntersectionObserver(entries => {
+    active = entries[0].isIntersecting;
+    if (active) onScroll();
+  }, { threshold: 0 });
+  observer.observe(targets[0].el.closest(".hero"));
+
+  function onScroll() {
+    if (!active || ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      targets.forEach(t => {
+        t.el.style.setProperty("--deco-scroll-y", (y * t.speed).toFixed(1) + "px");
+      });
+      ticking = false;
+    });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
 }
