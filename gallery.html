@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — Edison Robotics Centre</title>
+  <meta name="description" content="Browse photos and videos from Edison Robotics Centre's workshops, competitions, robotics builds and coding sessions.">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="lightbox-overlay" id="lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox-close" id="lb-close" aria-label="Close">&times;</button>
+    <div id="lb-stage"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand-link">
+        <div class="nav-logo"><img src="assets/ach36.png" alt="Edison Robotics Centre logo"></div>
+        <div class="nav-brand-text"><span class="name">Edison Robotics Centre</span><span class="tag">STEM · Robotics · AI · Coding</span></div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="events.html">Events</a>
+        <a href="achievement.html">Achievements</a>
+        <a href="gallery.html" class="active-link">Gallery</a>
+        <a href="contactus.html" class="nav-btn">Enroll Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="ph-bg" style="background-image:url('assets/ach9.PNG');"></div>
+    <div class="ph-overlay"></div>
+    <div class="ph-inner">
+      <nav class="ph-crumb"><a href="index.html">Home</a><span>/</span><span class="current">Gallery</span></nav>
+      <h1>Life at <span class="accent">Edison</span></h1>
+      <p>Photos and videos from our workshops, competitions, robotics builds and coding sessions.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+
+      <div class="gallery-filters reveal">
+        <button class="gfilter active" data-filter="all">All</button>
+        <button class="gfilter" data-filter="competitions">Competitions</button>
+        <button class="gfilter" data-filter="workshops">Workshops</button>
+        <button class="gfilter" data-filter="robotics">Robotics</button>
+        <button class="gfilter" data-filter="coding">Coding</button>
+        <button class="gfilter" data-filter="ai">AI</button>
+      </div>
+
+      <div class="masonry">
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-arduino.png"><img src="assets/ach-workshop-arduino.png" alt="Trainer guiding students through an Arduino wiring exercise" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach1.PNG"><img src="assets/ach1.PNG" alt="Robotics workshop" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="robotics" data-type="video" data-full="assets/ach40.mp4"><img src="assets/ach1.PNG" alt="Workshop highlight video" loading="lazy"><div class="g-play"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="11" fill="rgba(8,8,10,0.35)"/><path d="M10 8.5v7l6-3.5-6-3.5Z" fill="white"/></svg></div><span class="g-tag">Video</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach2.PNG"><img src="assets/ach2.PNG" alt="IoT and robotics workshop" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="competitions ai" data-full="assets/ach4.PNG"><img src="assets/ach4.PNG" alt="IIICE UTHM Innovation 2024" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach5.PNG"><img src="assets/ach5.PNG" alt="2024 achievement" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach3.PNG"><img src="assets/ach3.PNG" alt="Hands-on technical workshop" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach6.PNG"><img src="assets/ach6.PNG" alt="STEM Competition 2024" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions ai" data-full="assets/ach7.PNG"><img src="assets/ach7.PNG" alt="School partnership achievement" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="robotics coding" data-full="assets/ach8.PNG"><img src="assets/ach8.PNG" alt="Student highlight" loading="lazy"><span class="g-tag">Student</span></div>
+        <div class="g-tile" data-category="robotics coding" data-full="assets/ach9.PNG"><img src="assets/ach9.PNG" alt="Student highlight" loading="lazy"><span class="g-tag">Student</span></div>
+        <div class="g-tile" data-category="robotics coding" data-full="assets/ach10.PNG"><img src="assets/ach10.PNG" alt="Student highlight" loading="lazy"><span class="g-tag">Student</span></div>
+        <div class="g-tile" data-category="workshops" data-full="assets/ach16.PNG"><img src="assets/ach16.PNG" alt="Youth CSR football programme" loading="lazy"><span class="g-tag">Community</span></div>
+        <div class="g-tile" data-category="robotics coding" data-full="assets/ach11.PNG"><img src="assets/ach11.PNG" alt="Student highlight" loading="lazy"><span class="g-tag">Student</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach13.PNG"><img src="assets/ach13.PNG" alt="Student spotlight" loading="lazy"><span class="g-tag">Spotlight</span></div>
+        <div class="g-tile" data-category="robotics coding" data-full="assets/ach12.PNG"><img src="assets/ach12.PNG" alt="Student highlight" loading="lazy"><span class="g-tag">Student</span></div>
+        <div class="g-tile" data-category="workshops" data-full="assets/ach17.PNG"><img src="assets/ach17.PNG" alt="Youth CSR football programme" loading="lazy"><span class="g-tag">Community</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach14.PNG"><img src="assets/ach14.PNG" alt="Student spotlight" loading="lazy"><span class="g-tag">Spotlight</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach23.PNG"><img src="assets/ach23.PNG" alt="KANITHA POR maths quiz" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops" data-full="assets/ach18.PNG"><img src="assets/ach18.PNG" alt="Youth CSR football programme" loading="lazy"><span class="g-tag">Community</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach15.PNG"><img src="assets/ach15.PNG" alt="Student spotlight" loading="lazy"><span class="g-tag">Spotlight</span></div>
+        <div class="g-tile" data-category="competitions coding" data-full="assets/ach24.PNG"><img src="assets/ach24.PNG" alt="KANITHA POR maths quiz" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops" data-full="assets/ach19.PNG"><img src="assets/ach19.PNG" alt="Youth CSR football programme" loading="lazy"><span class="g-tag">Community</span></div>
+        <div class="g-tile" data-category="competitions coding" data-full="assets/ach25.PNG"><img src="assets/ach25.PNG" alt="KANITHA POR maths quiz" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops" data-full="assets/ach20.PNG"><img src="assets/ach20.PNG" alt="Youth CSR football programme" loading="lazy"><span class="g-tag">Community</span></div>
+        <div class="g-tile" data-category="competitions coding" data-full="assets/ach26.PNG"><img src="assets/ach26.PNG" alt="KANITHA POR maths quiz" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops" data-full="assets/ach21.PNG"><img src="assets/ach21.PNG" alt="Youth CSR football programme" loading="lazy"><span class="g-tag">Community</span></div>
+        <div class="g-tile" data-category="competitions coding" data-full="assets/ach27.PNG"><img src="assets/ach27.PNG" alt="KANITHA POR maths quiz" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops" data-full="assets/ach22.PNG"><img src="assets/ach22.PNG" alt="Youth CSR football programme" loading="lazy"><span class="g-tag">Community</span></div>
+        <div class="g-tile" data-category="competitions coding" data-full="assets/ach29.PNG"><img src="assets/ach29.PNG" alt="Asia Championship I Code 2025" loading="lazy"><span class="g-tag">International</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach30.PNG"><img src="assets/ach30.PNG" alt="RAC 2025 UTHM Robotic Challenger" loading="lazy"><span class="g-tag">International</span></div>
+        <div class="g-tile" data-category="competitions ai" data-full="assets/ach31.PNG"><img src="assets/ach31.PNG" alt="Edison team 2025 achievements" loading="lazy"><span class="g-tag">International</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach32.PNG"><img src="assets/ach32.PNG" alt="Certificate of recognition" loading="lazy"><span class="g-tag">Certificate</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach33.PNG"><img src="assets/ach33.PNG" alt="Certificate of recognition" loading="lazy"><span class="g-tag">Certificate</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach34.PNG"><img src="assets/ach34.PNG" alt="Certificate of recognition" loading="lazy"><span class="g-tag">Certificate</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach35.PNG"><img src="assets/ach35.PNG" alt="Certificate of recognition" loading="lazy"><span class="g-tag">Certificate</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach28.PNG"><img src="assets/ach28.PNG" alt="Student team with trainer at a STEM exhibition" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach-badminton5.jpg"><img src="assets/ach-badminton5.jpg" alt="Full group photo at the Edison Badminton Tournament 2026" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach-badminton1.jpg"><img src="assets/ach-badminton1.jpg" alt="Parents with active participation certificates at the badminton tournament" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach-badminton2.jpg"><img src="assets/ach-badminton2.jpg" alt="Students with medals at the badminton tournament" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach-badminton3.jpg"><img src="assets/ach-badminton3.jpg" alt="Students with medals at the badminton tournament" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach-badminton4.jpg"><img src="assets/ach-badminton4.jpg" alt="Students with medals at the badminton tournament" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions" data-full="assets/ach-badminton6.jpg"><img src="assets/ach-badminton6.jpg" alt="Students and parents at the badminton tournament" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-microbit-sjkt1.jpg"><img src="assets/ach-microbit-sjkt1.jpg" alt="Micro:Bit workshop at SJKT Bukit Serampang" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-microbit-sjkt2.jpg"><img src="assets/ach-microbit-sjkt2.jpg" alt="Micro:Bit workshop at SJKT Bukit Serampang" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-microbit-sjkt3.jpg"><img src="assets/ach-microbit-sjkt3.jpg" alt="Micro:Bit workshop at SJKT Bukit Serampang" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-microbit-sjkt4.jpg"><img src="assets/ach-microbit-sjkt4.jpg" alt="Micro:Bit workshop at SJKT Bukit Serampang" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-microbit-sjkt5.jpg"><img src="assets/ach-microbit-sjkt5.jpg" alt="Micro:Bit workshop at SJKT Bukit Serampang" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-lobak1.jpg"><img src="assets/ach-workshop-lobak1.jpg" alt="STEM workshop at SJKT Lobak, Negeri Sembilan" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-lobak2.jpg"><img src="assets/ach-workshop-lobak2.jpg" alt="STEM workshop at SJKT Lobak, Negeri Sembilan" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-lobak3.jpg"><img src="assets/ach-workshop-lobak3.jpg" alt="STEM workshop at SJKT Lobak, Negeri Sembilan" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-lobak4.jpg"><img src="assets/ach-workshop-lobak4.jpg" alt="STEM workshop at SJKT Lobak, Negeri Sembilan" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-lobak5.jpg"><img src="assets/ach-workshop-lobak5.jpg" alt="STEM workshop at SJKT Lobak, Negeri Sembilan" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-lobak6.jpg"><img src="assets/ach-workshop-lobak6.jpg" alt="STEM workshop at SJKT Lobak, Negeri Sembilan" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach-nrl-jb1.jpg"><img src="assets/ach-nrl-jb1.jpg" alt="Students winning at the National Robotic League, Paradigm Mall Johor Bahru" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach-nrl-jb2.jpg"><img src="assets/ach-nrl-jb2.jpg" alt="Students winning at the National Robotic League, Paradigm Mall Johor Bahru" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach-nrl-jb3.jpg"><img src="assets/ach-nrl-jb3.jpg" alt="Students winning at the National Robotic League, Paradigm Mall Johor Bahru" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach-nrl-jb4.jpg"><img src="assets/ach-nrl-jb4.jpg" alt="Students winning at the National Robotic League, Paradigm Mall Johor Bahru" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="competitions robotics" data-full="assets/ach-nrl-jb5.jpg"><img src="assets/ach-nrl-jb5.jpg" alt="Students winning at the National Robotic League, Paradigm Mall Johor Bahru" loading="lazy"><span class="g-tag">Competition</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-gelangpatah1.jpg"><img src="assets/ach-workshop-gelangpatah1.jpg" alt="STEM workshop at SJKT Gelang Patah, Johor Bahru" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-gelangpatah2.jpg"><img src="assets/ach-workshop-gelangpatah2.jpg" alt="STEM workshop at SJKT Gelang Patah, Johor Bahru" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-gelangpatah3.jpg"><img src="assets/ach-workshop-gelangpatah3.jpg" alt="STEM workshop at SJKT Gelang Patah, Johor Bahru" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-gelangpatah4.jpg"><img src="assets/ach-workshop-gelangpatah4.jpg" alt="STEM workshop at SJKT Gelang Patah, Johor Bahru" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="workshops robotics coding" data-full="assets/ach-workshop-gelangpatah5.jpg"><img src="assets/ach-workshop-gelangpatah5.jpg" alt="STEM workshop at SJKT Gelang Patah, Johor Bahru" loading="lazy"><span class="g-tag">Workshop</span></div>
+        <div class="g-tile" data-category="competitions robotics ai" data-full="assets/ach-minister-showcase1.jpg"><img src="assets/ach-minister-showcase1.jpg" alt="Students showcasing their projects to Malaysia's Minister of Digital, 2026" loading="lazy"><span class="g-tag">National Recognition</span></div>
+        <div class="g-tile" data-category="competitions robotics ai" data-full="assets/ach-minister-showcase2.jpg"><img src="assets/ach-minister-showcase2.jpg" alt="Students showcasing their projects to Malaysia's Minister of Digital, 2026" loading="lazy"><span class="g-tag">National Recognition</span></div>
+        <div class="g-tile" data-category="competitions robotics ai" data-full="assets/ach-minister-showcase3.jpg"><img src="assets/ach-minister-showcase3.jpg" alt="Students showcasing their projects to Malaysia's Minister of Digital, 2026" loading="lazy"><span class="g-tag">National Recognition</span></div>
+        <div class="g-tile" data-category="competitions robotics ai" data-full="assets/ach-minister-showcase4.jpg"><img src="assets/ach-minister-showcase4.jpg" alt="Students showcasing their projects to Malaysia's Minister of Digital, 2026" loading="lazy"><span class="g-tag">National Recognition</span></div>
+        <div class="g-tile" data-category="competitions robotics ai" data-full="assets/ach-minister-showcase5.jpg"><img src="assets/ach-minister-showcase5.jpg" alt="Students showcasing their projects to Malaysia's Minister of Digital, 2026" loading="lazy"><span class="g-tag">National Recognition</span></div>
+      </div>
+
+    </div>
+  </main>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-banner reveal-scale">
+        <h2>Want To See This In Person?</h2>
+        <p>Book a trial class and experience an Edison workshop for yourself.</p>
+        <div class="cta-actions">
+          <a href="contactus.html" class="btn btn-primary">Book a Trial Class</a>
+          <a href="events.html" class="btn btn-ghost">See Upcoming Events</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/ach36.png" alt="Edison Robotics Centre logo">
+        <h2>Edison Robotics Centre</h2>
+        <p>Malaysia's leading STEM, Robotics, AI and Coding academy — building future-ready skills through hands-on technology education.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/60177361857" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.472 2.027 7.774L0 32l8.426-2.007A15.934 15.934 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.773-1.853l-.486-.289-5.002 1.192 1.227-4.878-.317-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.862c-.398-.199-2.354-1.162-2.718-1.294-.364-.133-.629-.199-.894.199-.265.398-1.027 1.294-1.259 1.559-.232.265-.464.298-.862.1-.398-.199-1.681-.619-3.203-1.977-1.184-1.056-1.983-2.36-2.215-2.758-.232-.398-.025-.614.174-.812.179-.178.398-.464.597-.696.199-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.894-2.154-1.225-2.95-.322-.773-.65-.668-.894-.68l-.762-.013c-.265 0-.696.1-1.061.497-.364.398-1.392 1.36-1.392 3.315s1.425 3.845 1.624 4.11c.199.265 2.804 4.28 6.793 5.999.95.41 1.692.655 2.27.839.954.304 1.822.261 2.509.158.765-.114 2.354-.962 2.687-1.891.332-.929.332-1.726.232-1.891-.099-.166-.364-.265-.762-.464z"/></svg></a>
+          <a href="mailto:edisontrainingcentre.etc@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+          <a href="https://www.google.com/maps?q=25A,+Jalan+Perkasa+2,+Taman+Ungku+Tun+Aminah,+81300+Skudai,+Johor" target="_blank" rel="noopener" aria-label="Location on Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></a>
+        </div>
+        <form class="footer-newsletter" onsubmit="event.preventDefault(); this.reset(); alert('Thanks for subscribing!');">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-col">
+        <h3>Courses</h3>
+        <a href="scratch.html">Scratch Coding</a>
+        <a href="microbit.html">Micro:Bit</a>
+        <a href="arduino.html">Arduino Robotics</a>
+        <a href="computer.html">ICT Lesson</a>
+        <a href="drone.html">Drone Training</a>
+        <a href="ai.html">AI Training</a>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="about.html">About Us</a>
+        <a href="courses.html">Our Courses</a>
+        <a href="events.html">Upcoming Events</a>
+        <a href="achievement.html">Achievements</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>25A, Jalan Perkasa 2, Taman Ungku Tun Aminah, 81300 Skudai, Johor</p>
+        <p>017-736 1857 &middot; 011-5504 3887</p>
+        <p>edisontrainingcentre.etc@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024–2025 Edison Robotics Centre. All rights reserved.</p>
+      <p><a href="contactus.html">Get in touch</a></p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/60177361857" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="white"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.472 2.027 7.774L0 32l8.426-2.007A15.934 15.934 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.773-1.853l-.486-.289-5.002 1.192 1.227-4.878-.317-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.862c-.398-.199-2.354-1.162-2.718-1.294-.364-.133-.629-.199-.894.199-.265.398-1.027 1.294-1.259 1.559-.232.265-.464.298-.862.1-.398-.199-1.681-.619-3.203-1.977-1.184-1.056-1.983-2.36-2.215-2.758-.232-.398-.025-.614.174-.812.179-.178.398-.464.597-.696.199-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.894-2.154-1.225-2.95-.322-.773-.65-.668-.894-.68l-.762-.013c-.265 0-.696.1-1.061.497-.364.398-1.392 1.36-1.392 3.315s1.425 3.845 1.624 4.11c.199.265 2.804 4.28 6.793 5.999.95.41 1.692.655 2.27.839.954.304 1.822.261 2.509.158.765-.114 2.354-.962 2.687-1.891.332-.929.332-1.726.232-1.891-.099-.166-.364-.265-.762-.464z"/></svg>
+    <span class="wa-label">Chat with us</span>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>

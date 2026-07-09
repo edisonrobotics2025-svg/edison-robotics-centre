@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "KANITHA POR 2026",
+    "date": "2 August 2026 - 9 August 2026",
+    "time": "9:00 AM",
+    "venue": "Online — Nationwide (Tamil Schools)",
+    "description": "A national-level online Math Puzzle Competition for Tamil Primary School Students presented by Edison Training Centre. First round on 2 August, with the final round (top 50 only) on 9 August 2026. Champions win a laptop, cash prize, trophy and certificate — entry fee RM49, available in English & Tamil.",
+    "registerLinks": [
+      { "label": "Register — LEVEL 1", "url": "https://docs.google.com/forms/d/e/1FAIpQLSd7EiYGjZdcFoW8E8xJnSMPU4s8PDIhZaTOswG4Tw7uaIyqGA/viewform?pli=1" },
+      { "label": "Register — LEVEL 2", "url": "https://docs.google.com/forms/d/e/1FAIpQLSeadMNpMdpJYarj_4ujP704fPrl0gFtm4k0FYVJfW6AK4CZCg/viewform" }
+    ],
+    "posters": [
+      "assets/events/KANITHAPOR1.jpeg",
+      "assets/events/KANITHAPOR2.png"
+    ]
+  }
+]

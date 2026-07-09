@@ -1,0 +1,71 @@
+/* Chapter/mosaic layouts specific to the Achievements storytelling page.
+   Requires style.css to be loaded first. */
+
+.chapter { margin-bottom: var(--sp-9); }
+.chapter-head {
+  display: flex; align-items: flex-start; gap: var(--sp-5);
+  margin-bottom: var(--sp-6); padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--gray-200);
+}
+.chapter-number {
+  font-family: var(--font-head); font-size: 3rem; font-weight: 700; line-height: 1;
+  color: var(--gray-200); flex-shrink: 0; min-width: 2.6rem; transition: color var(--dur-med);
+}
+.chapter:hover .chapter-number { color: var(--red-bright); }
+.chapter-meta { flex: 1; }
+.chapter-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--red); margin-bottom: 8px;
+}
+.chapter-tag::before { content: ""; width: 20px; height: 2px; background: var(--red); }
+.chapter-title { font-size: clamp(1.2rem, 2.4vw, 1.7rem); margin-bottom: 8px; }
+.chapter-desc { color: var(--text-muted); font-size: 0.96rem; line-height: 1.8; max-width: 680px; }
+.chapter-desc strong { color: var(--text); font-weight: 700; }
+
+.img-tile {
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--surface);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-med) var(--ease), box-shadow var(--dur-med) var(--ease);
+}
+.img-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.img-tile:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.img-tile:hover img { transform: scale(1.04); }
+
+.mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); }
+.mosaic .img-tile { aspect-ratio: 4/3; }
+
+.grid-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--sp-4); }
+.grid-tiles .img-tile { aspect-ratio: 4/3; }
+.grid-tiles.portrait .img-tile { aspect-ratio: 3/4; background: var(--white); }
+.grid-tiles.portrait .img-tile img { object-fit: contain; }
+
+.featured-layout { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--sp-4); }
+.featured-layout .img-tile.main { aspect-ratio: 4/3; }
+.featured-sides { display: flex; flex-direction: column; gap: var(--sp-4); }
+.featured-sides .img-tile { flex: 1; min-height: 0; }
+.featured-sides .img-tile img { height: 100%; }
+
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); }
+.trio .img-tile { aspect-ratio: 4/3; }
+
+.strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--sp-4); }
+.strip .img-tile { aspect-ratio: 4/3; }
+
+@media (max-width: 900px) {
+  .featured-layout { grid-template-columns: 1fr; }
+  .featured-layout .img-tile.main { aspect-ratio: 16/9; }
+  .featured-sides .img-tile { flex: none; aspect-ratio: 4/3; }
+  .mosaic, .trio { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .chapter-head { flex-direction: column; gap: 8px; }
+  .chapter-number { font-size: 2rem; }
+}
+@media (max-width: 420px) {
+  .mosaic, .trio { grid-template-columns: 1fr; }
+}
